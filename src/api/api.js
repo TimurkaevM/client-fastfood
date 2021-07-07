@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: 'http://localhost:5000/food/',
+  baseURL: 'https://ancient-crag-45756.herokuapp.com/food/',
 });
