@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  font-family: 'Roboto', -apple-system, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  width: 1247px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
