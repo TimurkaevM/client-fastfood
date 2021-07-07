@@ -1,5 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { postBasket, changeStreetError, changePriceError, changeItemsError, changeHouseError } from '../../redux/ducks/basket';
+import {
+  postBasket,
+  changeStreetError,
+  changePriceError,
+  changeItemsError,
+  changeHouseError,
+} from '../../redux/ducks/basket';
 import './Header.scss';
 
 function Basket() {
@@ -14,24 +20,26 @@ function Basket() {
   const message = useSelector((state) => state.basket.message);
 
   const handlePostBasket = () => {
-    if(price === 0) {
-      dispatch(changePriceError())
-    } else if(items.length === 0) {
-      dispatch(changeItemsError())
-    } else if(street === '') {
-      dispatch(changeStreetError())
-    } else if(house === '') {
-      dispatch(changeHouseError())
+    if (price === 0) {
+      dispatch(changePriceError());
+    } else if (items.length === 0) {
+      dispatch(changeItemsError());
+    } else if (street === '') {
+      dispatch(changeStreetError());
+    } else if (house === '') {
+      dispatch(changeHouseError());
     } else {
       console.log(message);
-      dispatch(postBasket({items, price, street, house}));
+      dispatch(postBasket({ items, price, street, house }));
     }
-  }
-
-
+  };
 
   return (
-    <button disabled={!active} onClick={handlePostBasket} className="header__basket">
+    <button
+      disabled={!active}
+      onClick={handlePostBasket}
+      className="header__basket"
+    >
       <div className="header__price">
         <span>{price}</span>
         <i className="fa fa-rub" aria-hidden="true"></i>
@@ -39,7 +47,7 @@ function Basket() {
       <div className="header__icon">
         <i className="fa fa-shopping-basket" aria-hidden="true"></i>
       </div>
-      {priceError ? <div className="header__error">{priceError}</div> : null }
+      {priceError ? <div className="header__error">{priceError}</div> : null}
     </button>
   );
 }

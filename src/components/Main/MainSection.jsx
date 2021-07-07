@@ -12,7 +12,7 @@ function MainSection(props) {
       <div className="container">
         <div className="section__title">{props.category.name}</div>
         <div className="section__category">
-          <Scrollable _class='section__cards'>
+          <Scrollable _class="section__cards">
             {props.category.products.map((product, productIndex) => {
               return (
                 <MainCard

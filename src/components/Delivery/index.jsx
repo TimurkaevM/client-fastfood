@@ -7,7 +7,7 @@ import './Delivery.scss';
 function Delivery() {
   const dispatch = useDispatch();
 
-  const active = useSelector(state => state.basket.active);
+  const active = useSelector((state) => state.basket.active);
 
   const changeDelivery = () => {
     dispatch(setActiveTrue());
@@ -32,10 +32,7 @@ function Delivery() {
           </div>
         </div>
 
-        {active ? (
-          <DeliveryForms />
-        ) : null}
-
+        {active ? <DeliveryForms /> : null}
       </div>
     </div>
   );

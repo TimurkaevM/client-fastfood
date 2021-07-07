@@ -50,7 +50,6 @@
     box-sizing: border-box;
   }
 
-  
   &__cards::-webkit-scrollbar {
     width: 0;
     background: transparent;
@@ -196,11 +195,10 @@
   display: none;
 }
 
-
 @media only screen and (max-width: 1300px) {
   .main {
     position: relative;
-  
+
     &__container {
       width: 85%;
       margin: 0 auto;
@@ -229,11 +227,11 @@
     h1 {
       font-size: 45px;
     }
-  
+
     &__buttons {
       width: 250px;
       height: 40px;
-  
+
       div {
         width: 50%;
         border-radius: 8px;
@@ -254,7 +252,6 @@
       font-size: 14.5px;
     }
   }
-
 }
 
 @media only screen and (max-width: 720px) {
@@ -266,7 +263,7 @@
   }
 }
 
-@media only screen and (max-width:665px) {
+@media only screen and (max-width: 665px) {
   .main {
     &__category {
       padding-bottom: 7px;
@@ -275,7 +272,7 @@
   }
 }
 
-@media only screen and (max-width:550px) {
+@media only screen and (max-width: 550px) {
   .main {
     &__categories {
       display: none;
@@ -303,7 +300,7 @@
       font-size: 17px;
       line-height: 35px;
     }
-    
+
     &__title {
       font-size: 20px;
       line-height: 30px;
@@ -313,11 +310,10 @@
   }
 }
 
-@media only screen and (max-width:320px) {
-
+@media only screen and (max-width: 320px) {
   .card {
     padding: 25px 26px;
-    
+
     &__img {
       width: 150px;
       height: 120px;
@@ -327,7 +323,7 @@
       font-size: 17px;
       line-height: 35px;
     }
-    
+
     &__title {
       font-size: 20px;
       line-height: 30px;

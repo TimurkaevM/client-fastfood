@@ -4,7 +4,7 @@ function MainCard(props) {
   const checkBasket = props.basket.some(
     (item) => item._id === props.product._id,
   );
-  
+
   const counter = props.basket.filter(
     (item) => item._id === props.product._id,
   ).length;

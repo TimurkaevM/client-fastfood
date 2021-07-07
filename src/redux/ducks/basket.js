@@ -1,6 +1,5 @@
 import { api } from '../../api/api';
 
-
 const POST_START = 'basket/load/start';
 const POST_SUCCESS = 'basket/load/success';
 const ADDED = 'basket/added/success';
@@ -11,8 +10,8 @@ const STREET_ERROR = 'change/street/error';
 const HOUSE_ERROR = 'change/house/error';
 const ITEMS_ERROR = 'change/items/error';
 const PRICE_ERROR = 'change/price/error';
-const SET_TRUE = "active/true";
-const SET_FALSE = "active/false";
+const SET_TRUE = 'active/true';
+const SET_FALSE = 'active/false';
 
 const initialState = {
   items: [],
@@ -21,7 +20,7 @@ const initialState = {
   house: '',
   loading: false,
   active: false,
-  message: "",
+  message: '',
 };
 
 export default function basket(state = initialState, action) {
@@ -40,20 +39,20 @@ export default function basket(state = initialState, action) {
         street: '',
         house: '',
         loading: false,
-        message: action.payload.message
+        message: action.payload.message,
       };
 
     case SET_TRUE:
-    return {
-      ...state,
-      active: true,
-    };
+      return {
+        ...state,
+        active: true,
+      };
 
     case SET_FALSE:
-    return {
-      ...state,
-      active: false,
-    };
+      return {
+        ...state,
+        active: false,
+      };
 
     case ADDED:
       return {
@@ -89,44 +88,43 @@ export default function basket(state = initialState, action) {
         price: state.price - +deleteItems[0].price,
       };
 
-      case HOUSE: 
-        return {
-          ...state,
-          house: action.payload,
-          houseError: null,
-        }
+    case HOUSE:
+      return {
+        ...state,
+        house: action.payload,
+        houseError: null,
+      };
 
-      case STREET: 
+    case STREET:
       return {
         ...state,
         street: action.payload,
-        streetError: null
-      }
+        streetError: null,
+      };
 
-      case STREET_ERROR: 
-        return {
-          ...state,
-          streetError: 'Нужно заполнить для оформления доставки',
-        }
-      
-      case HOUSE_ERROR: 
+    case STREET_ERROR:
+      return {
+        ...state,
+        streetError: 'Нужно заполнить для оформления доставки',
+      };
+
+    case HOUSE_ERROR:
       return {
         ...state,
         houseError: 'Нужно заполнить для оформления доставки',
-      }
+      };
 
-      case PRICE_ERROR: 
+    case PRICE_ERROR:
       return {
         ...state,
         priceError: 'Корзина пуста',
-      }
-      
-      case ITEMS_ERROR: 
+      };
+
+    case ITEMS_ERROR:
       return {
         ...state,
         itemsError: 'Корзина пуста',
-      }
-
+      };
 
     default:
       return state;
@@ -151,58 +149,58 @@ export function changeHouse(e) {
   return {
     type: HOUSE,
     payload: e,
-  }
+  };
 }
 
 export function changeStreet(e) {
   return {
     type: STREET,
     payload: e,
-  }
+  };
 }
 
 export function changeStreetError() {
   return {
     type: STREET_ERROR,
-  }
+  };
 }
 
 export function changePriceError() {
   return {
     type: PRICE_ERROR,
-  }
+  };
 }
 
 export function changeHouseError() {
   return {
     type: HOUSE_ERROR,
-  }
+  };
 }
 
 export function changeItemsError() {
   return {
     type: ITEMS_ERROR,
-  }
+  };
 }
 
 export function setActiveTrue() {
   return {
     type: SET_TRUE,
-  }
+  };
 }
 
 export function setActiveFalse() {
   return {
     type: SET_FALSE,
-  }
+  };
 }
 
-
-export const postBasket = ({items, street, house, price}) => {
+export const postBasket = ({ items, street, house, price }) => {
   return (dispatch) => {
     dispatch({ type: POST_START });
 
-    api.post('/basket', {
+    api
+      .post('/basket', {
         items: items,
         price: price,
         street: street,

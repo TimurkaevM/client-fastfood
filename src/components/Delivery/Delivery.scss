@@ -70,7 +70,7 @@
     color: #000000;
     font-size: 16px;
   }
-  
+
   &__input.form__red {
     border: 1px solid red;
   }
@@ -89,11 +89,11 @@
     h1 {
       font-size: 50px;
     }
-  
+
     &__buttons {
       width: 270px;
       height: 45px;
-  
+
       div {
         width: 50%;
         border-radius: 8px;
@@ -112,11 +112,11 @@
     .delivery__title h1 {
       font-size: 40px;
     }
-  
+
     &__buttons {
       width: 250px;
       height: 40px;
-  
+
       div {
         width: 50%;
         border-radius: 8px;
@@ -134,18 +134,18 @@
   .delivery {
     padding: 50px 0;
     box-sizing: border-box;
-  
+
     h1 {
       font-size: 45px;
       width: 100%;
       text-align: center;
     }
-  
+
     &__buttons {
       width: 250px;
       height: 40px;
       margin: 0 auto;
-  
+
       div {
         width: 50%;
         border-radius: 8px;
@@ -154,10 +154,9 @@
         line-height: 40px;
       }
     }
-
   }
-  
-  .form {  
+
+  .form {
     &__error {
       bottom: -20px;
     }
@@ -168,18 +167,18 @@
   .delivery {
     padding: 0 0 30px 0;
     box-sizing: border-box;
-  
+
     h1 {
       font-size: 38px;
       width: 100%;
       text-align: center;
     }
-  
+
     &__buttons {
       width: 240px;
       height: 38px;
       margin: 0 auto;
-  
+
       div {
         width: 50%;
         border-radius: 8px;
@@ -190,9 +189,9 @@
         cursor: pointer;
       }
     }
-  
+
     &__forms {
-      margin:15px auto 0;
+      margin: 15px auto 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -200,7 +199,7 @@
       max-width: 100%;
     }
   }
-  
+
   .form {
     justify-content: space-between;
     width: 100%;
@@ -209,18 +208,18 @@
     &:last-child {
       margin-bottom: 0;
     }
-  
+
     &__name {
       font-size: 25px;
     }
-  
+
     &__input {
       height: 40px;
       width: 200px;
       padding: 6px 13px;
       font-size: 13px;
     }
-  
+
     &__error {
       right: 0;
       text-align: right;
@@ -230,20 +229,19 @@
   }
 }
 
-@media only screen and (max-width:665px) {
+@media only screen and (max-width: 665px) {
   .delivery {
-
     h1 {
       font-size: 32px;
       width: 100%;
       text-align: center;
     }
-    
+
     &__buttons {
       width: 220px;
       height: 32px;
       margin: 0 auto;
-  
+
       div {
         width: 50%;
         border-radius: 6px;
@@ -256,21 +254,21 @@
     }
 
     &__forms {
-      margin:15px auto 0;
+      margin: 15px auto 0;
       display: flex;
       justify-content: space-between;
       width: 300px;
       max-width: 100%;
     }
   }
-  
+
   .form {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
-  
+
     &__name {
       width: 100%;
       margin-bottom: 3px;
@@ -278,13 +276,13 @@
       font-size: 28px;
       color: #000000;
     }
-  
+
     &__input {
       height: 42px;
       width: 210px;
       font-size: 16px;
     }
-  
+
     &__error {
       position: absolute;
       text-align: center;
@@ -295,10 +293,8 @@
   }
 }
 
-@media only screen and (max-width:320px) {
-
+@media only screen and (max-width: 320px) {
   .delivery__title h1 {
     font-size: 25px;
   }
 }
-
